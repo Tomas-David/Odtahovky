@@ -1,5 +1,14 @@
 
+
 :root{
   --main-color: #0055D3;
-  --light: #fff
+  --light: #fff;
+  --light-main: #EDEEFF ;
+  font-family: "inter", sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

@@ -1,0 +1,15 @@
+
+
+.header{
+    background-color: var(--light-main);
+    color: var(--main-color);
+    padding: 1rem;
+}
+
+.heading{
+    font-weight: 400;
+}
+
+.highlight{
+    font-weight: 600;
+}
