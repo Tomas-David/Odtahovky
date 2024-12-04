@@ -1,6 +1,6 @@
 //React
 import { Link } from 'react-router-dom';
-
+import { useState } from 'react';
 //Assets
 import logo  from '../../assets/logo.svg';
 
@@ -16,30 +16,33 @@ import { FiUser } from "react-icons/fi";
 
 //Navigace stránky
 const Navbar: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(true);
     return (
         <nav className={classes.nav}>
+            
             <img src={logo} alt="Logo" />
-            <menu className={classes.menu}>
-                <li>
-                    <Link to="/">Home</Link>
+            <menu className={isOpen ? `${classes.menu}` : `${classes.menu__toggle}`}>
+                <li className={classes.menu__item}>
+                    <Link className={classes.menu__link} to="/">Home</Link>
                 </li>
-                <li>
-                    <Link to="/services">Služby</Link>
+                <li className={classes.menu__item}>
+                    <Link className={classes.menu__link} to="/services">Služby</Link>
                 </li>
-                <li>
-                    <Link to="/prices">Ceník</Link>
+                <li className={classes.menu__item}>
+                    <Link className={classes.menu__link} to="/prices">Ceník</Link>
                 </li>
-                <li>
-                    <Link to="/about">O nás</Link>
+                <li className={classes.menu__item}>
+                    <Link className={classes.menu__link} to="/about">O nás</Link>
                 </li>
-                <li>
-                    <Link to="/contact">Kontakt</Link>
+                <li className={classes.menu__item}>
+                    <Link className={classes.menu__link} to="/contact">Kontakt</Link>
                 </li>
             </menu>
             <div className={classes.icon_menu}>
                 <button className={classes.button}>{<FiUser  className={classes.icon} />}</button>
-                <button className={classes.button}>{<FiMenu  className={classes.icon} />}</button>
+                <button onClick={() => setIsOpen(!isOpen)} className={classes.button}>{<FiMenu  className={classes.icon} />}</button>
             </div>
+
         </nav>
     );
 }
