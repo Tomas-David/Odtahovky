@@ -85,12 +85,20 @@
 }
 
 .menu__item{
-    padding: 1em;
+    padding: .5em;
+
 }
 
 .menu__link{
     color: var(--light);
     text-decoration: none;
+    background-color: var(--secondary-color);
+    display: flex;
+    padding: .5rem;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
 }
 
 .button{

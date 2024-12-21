@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                     <Link className={classes.menu__link} to="/prices">Ceník</Link>
                 </li>
                 <li className={classes.menu__item}>
-                    <Link className={classes.menu__link} to="/about">O nás</Link>
+                    <Link className={classes.menu__link} to="/about-us">O nás</Link>
                 </li>
                 <li className={classes.menu__item}>
                     <Link className={classes.menu__link} to="/contact">Kontakt</Link>

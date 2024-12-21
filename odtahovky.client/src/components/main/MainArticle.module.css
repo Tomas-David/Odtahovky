@@ -1,0 +1,9 @@
+
+.heading{
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.container{
+    padding: 1em;
+}
