@@ -39,6 +39,10 @@
     
 }
 
+.logo{
+    height: 75px;
+    width: 75px;
+}
 
 .nav{
     background-color: var(--main-color);
@@ -49,6 +53,9 @@
     position: relative; 
 }
 
+.menu__dektop{
+    display: none;
+}
 
 
 .menu{
@@ -83,6 +90,7 @@
     animation: 1s slideDown;
     animation: .2s fadeIn;
 }
+
 
 .menu__item{
     padding: .5em;
@@ -121,3 +129,25 @@
     display: flex;
     gap: .5em;
 }
+
+@media screen and (min-width: 1150px){
+    .menu{
+        display: flex;
+        position: static;
+        transform: translateX(0);
+    }
+
+    .menu__link{
+        padding: .5em;
+        background-color: transparent;  
+    }
+    .menu__dektop{
+        display: block;
+    }
+
+    .icon_menu{
+        display: none;
+    }
+
+     
+ }

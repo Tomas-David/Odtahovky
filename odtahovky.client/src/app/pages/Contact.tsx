@@ -3,8 +3,7 @@ import MainArticle from "../../components/main/MainArticle";
 import HorizontalPanelBig from "../../components/panel/HorizontalPanelBig";
 import ContactUsLinks from "../../components/contact-us/ContactUsLinks";
 import Socials from "../../components/socials/Socials";
-
-
+import ContactForm from '../../components/contact-form/ContactForm';
 
 const Contact: React.FC = () => {
     return (
@@ -12,6 +11,7 @@ const Contact: React.FC = () => {
             <HorizontalPanelBig>
                 <ContactUsLinks />
                 <Socials />
+                <ContactForm/>
             </HorizontalPanelBig>
         </MainArticle>
     );

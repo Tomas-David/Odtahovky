@@ -23,6 +23,9 @@ const Footer: React.FC = () => {
                     <FiLinkedin size={24}/>
                 </div>
             </div>
+            <div className={classes.author}>
+                Created by Tomáš David
+            </div>
         </footer>
     );
     }

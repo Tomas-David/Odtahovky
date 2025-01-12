@@ -1,4 +1,6 @@
-
+.author{
+    display: none;
+}
 .footer{
     display: flex;
     justify-content: space-between;
@@ -17,4 +19,22 @@
 .link{
     text-decoration: none;
     color: var(--light-main);
+}
+
+@media screen and (min-width: 1150px){
+    .author{
+        display: block;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }

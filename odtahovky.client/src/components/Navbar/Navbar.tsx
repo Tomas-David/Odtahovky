@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     return (
         <nav className={classes.nav}>
             
-            <img src={logo} alt="Logo" />
+           <Link to="/"><img src={logo} alt="Logo"  className={classes.logo}/></Link> 
             <menu className={isOpen ? `${classes.menu}` : `${classes.menu__toggle}`}>
                 <li className={classes.menu__item}>
                     <Link className={classes.menu__link} to="/">Home</Link>
@@ -41,6 +41,18 @@ const Navbar: React.FC = () => {
             <div className={classes.icon_menu}>
                 <button className={classes.button}>{<FiUser  className={classes.icon} />}</button>
                 <button onClick={() => setIsOpen(!isOpen)} className={classes.button}>{<FiMenu  className={classes.icon} />}</button>
+            </div>
+
+            <div className={classes.menu__dektop}>
+                <menu className={classes.menu}>
+                    <li className={classes.menu__item}>
+                        <Link className={classes.menu__link} to="/login">Přihlásit</Link>
+                    </li>
+                    <li className={classes.menu__item}>
+                        <Link className={classes.menu__link} to="/register">Registrovat</Link>
+                    </li>
+                    
+                </menu>
             </div>
 
         </nav>
