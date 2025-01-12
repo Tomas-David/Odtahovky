@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                 </li>
             </menu>
             <div className={classes.icon_menu}>
-                <button className={classes.button}>{<FiUser  className={classes.icon} />}</button>
+                <Link to={'/login'} className={classes.button}>{<FiUser  className={classes.icon} />}</Link>
                 <button onClick={() => setIsOpen(!isOpen)} className={classes.button}>{<FiMenu  className={classes.icon} />}</button>
             </div>
 

@@ -11,6 +11,7 @@ import './normalize.css'
 import AboutUs from './app/pages/AboutUs';
 import Contact from './app/pages/Contact';
 import ServiceProvider from './app/pages/ServiceProvider';
+import Login from './app/pages/Login';
 
 
 const router = createBrowserRouter([
@@ -41,9 +42,14 @@ const router = createBrowserRouter([
             {
                 path: '/offer',
                 element: <Offer />,
-            },{
-                path: 'service-provider',
+            },
+            {
+                path: '/service-provider',
                 element: <ServiceProvider />,
+            },
+            {
+                path: '/login',
+                element: <Login />,
             }
         ],
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Odtahovky.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b03e6b51f184367f055be7a79d4d999ba82f07f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f420a7725b304841341654f248b7e6e3d8c12615")]
 [assembly: System.Reflection.AssemblyProductAttribute("Odtahovky.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Odtahovky.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
