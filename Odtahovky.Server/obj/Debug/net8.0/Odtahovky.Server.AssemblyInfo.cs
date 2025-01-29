@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Odtahovky.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ee9a375e6af2628dbe229b9c3c73f6645b37cb9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9c97ecab4401911b733a14e9ec857e31810d635")]
 [assembly: System.Reflection.AssemblyProductAttribute("Odtahovky.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Odtahovky.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
