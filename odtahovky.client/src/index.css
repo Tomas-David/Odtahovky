@@ -5,6 +5,7 @@
   --light: #fff;
   --light-main: #EDEEFF ;
   --secondary-color: #00C6C1;
+  --error-color: #FF5D7A;
   font-family: "inter", sans-serif;
 }
 
@@ -16,6 +17,7 @@ body{
 
 p{
   color: var(--main-color);
+  margin: 0;
 }
 
 .img-responsive{
