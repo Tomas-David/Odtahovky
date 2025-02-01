@@ -21,7 +21,7 @@ const Register: React.FC = () => {
         e.preventDefault();
         if(samePassword){
             const data = { email, password, userName, Phone };
-            const response = await fetch("/api/Auth/login", {
+            await fetch("/api/Auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -30,45 +30,46 @@ const Register: React.FC = () => {
         }
     }
 
-    const CheckPassword = () => {
-        if(password === passwordAgain){
-            setSamePassword(true);
-        } else {
-            setSamePassword(false);
-        }
 
-        if(password.length >= 8){
-            setPasswordLength(true);
-        } else {
-            setPasswordLength(false);
-        }
-
-        if(password.match(/[A-Z]/)){
-            setPasswordUpperCase(true);
-        } else {
-            setPasswordUpperCase(false);
-        }
-
-        if(password.match(/[0-9]/)){
-            setPasswordNumber(true);
-        } else {    
-            setPasswordNumber(false);
-        }
-
-    }
 
     useEffect(() => {
+        const CheckPassword = () => {
+            if(password === passwordAgain && password.length >= 8){
+                setSamePassword(true);
+            } else {
+                setSamePassword(false);
+            }
+    
+            if(password.length >= 8){
+                setPasswordLength(true);
+            } else {
+                setPasswordLength(false);
+            }
+    
+            if(password.match(/[A-Z]/)){
+                setPasswordUpperCase(true);
+            } else {
+                setPasswordUpperCase(false);
+            }
+    
+            if(password.match(/[0-9]/)){
+                setPasswordNumber(true);
+            } else {    
+                setPasswordNumber(false);
+            }
+    
+        }
         CheckPassword();
-    });
+    },[password, passwordAgain]);
 
     return (
         <form className={classes.container} onSubmit={submitHandler}>
             
-            <Input label="Jméno a příjmení" />
-            <Input label="Telefon" />
-            <Input label="Email" type="email" />
-            <Input label="Heslo" type="password" />
-            <Input label="Heslo znovu" type="password" />
+            <Input label="Jméno a příjmení" onChange={setUserName} />
+            <Input label="Telefon" onChange={setPhone} />
+            <Input label="Email" type="email"  onChange={setEmail}/>
+            <Input label="Heslo" type="password" onChange={setPassword}/>
+            <Input label="Heslo znovu" type="password" onChange={setPasswordAgain} />
             <InfoText text="Minimálně 8 znaků" condition={passwordLength} />
             <InfoText text="Alespoň jedno velké písmeno" condition={passwordUpperCase} />
             <InfoText text="Alespoň jedno číslo" condition={passwordNumber} />
