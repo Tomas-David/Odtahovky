@@ -9,10 +9,13 @@
   font-family: "inter", sans-serif;
 }
 
-body{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
+
+#root{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 p{
@@ -29,5 +32,5 @@ p{
   :root{
       background-color: var(--light-main);
   }
-   
+
 }

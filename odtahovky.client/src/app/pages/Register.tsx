@@ -63,6 +63,7 @@ const Register: React.FC = () => {
     },[password, passwordAgain]);
 
     return (
+        <div className={classes.wrapper}>
         <form className={classes.container} onSubmit={submitHandler}>
             
             <Input label="Jméno a příjmení" onChange={setUserName} />
@@ -76,6 +77,7 @@ const Register: React.FC = () => {
             <InfoText text="Hesla jsou stejná" condition={samePassword} />
             <button className={classes.btn} type="submit">Registrovat</button>
         </form>
+        </div>
     );
 }
 

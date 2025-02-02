@@ -8,9 +8,11 @@ type MainArticleProps = {
 
 const MainArticle: React.FC<PropsWithChildren<MainArticleProps>> = ({heading ,children}) => {
     return(
-        <main className={classes.container}>
+        <main>
+        <div className={classes.container}>
             <h2 className={classes.heading}>{heading}</h2>
             {children}
+        </div>
         </main>
     )
 }

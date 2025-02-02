@@ -8,10 +8,12 @@ import { FiCheckCircle } from "react-icons/fi";
 
 const Main: React.FC = () => {
     return(
-        <main className={classes.container}>
+        <main>
+        <div className={classes.container}>
                 <Card title="Rychlé propojení s odtahovkami."><FiShare2 size={48} /></Card>
                 <Card title="Transparentní ceny za kilometry."><FiDollarSign size={48}/></Card>
                 <Card title="Bezpečný převoz od prověřených řidičů."><FiCheckCircle size={48}/></Card>
+        </div>
         </main>
     )
 

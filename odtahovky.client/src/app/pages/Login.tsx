@@ -9,12 +9,14 @@ const Login: React.FC = () => {
 
 
     return (
-        <form className={classes.container}>
+        <form>
+        <div className={classes.container}>
 
                 <Input label="Email" type="email" />
                 <Input label="Heslo" type="password" />
 
             <button  className={classes.btn} type="submit">Přihlásit</button>
+        </div>
         </form>
     );
 }
