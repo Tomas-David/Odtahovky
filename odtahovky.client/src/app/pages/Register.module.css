@@ -17,4 +17,9 @@
         border-radius: .5rem;
     }
 
+    .loginLink{
+        color: var(--secondary-color);
+        font-weight: 600;
+    }
+
     

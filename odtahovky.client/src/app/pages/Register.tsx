@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import InfoText from "../../components/info-text/InfoText";
 import Input from "../../components/input/Input";
 import classes from './Register.module.css';
@@ -20,8 +21,10 @@ const Register: React.FC = () => {
     const submitHandler = async (e: React.FormEvent) => {
         e.preventDefault();
         if(samePassword){
+            
             const data = { email, password, userName, Phone };
-            await fetch("/api/Auth/login", {
+            console.log(data);
+            await fetch("/api/Auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -66,9 +69,9 @@ const Register: React.FC = () => {
         <div className={classes.wrapper}>
         <form className={classes.container} onSubmit={submitHandler}>
             
-            <Input label="Jméno a příjmení" onChange={setUserName} />
-            <Input label="Telefon" onChange={setPhone} />
-            <Input label="Email" type="email"  onChange={setEmail}/>
+            <Input placeholder="Karel Novák" label="Jméno a příjmení" onChange={setUserName} />
+            <Input placeholder="+420 123 456 789" label="Telefon" type="tel" onChange={setPhone} />
+            <Input placeholder="testovaci@gmail.com" label="Email" type="email"  onChange={setEmail}/>
             <Input label="Heslo" type="password" onChange={setPassword}/>
             <Input label="Heslo znovu" type="password" onChange={setPasswordAgain} />
             <InfoText text="Minimálně 8 znaků" condition={passwordLength} />
@@ -76,6 +79,7 @@ const Register: React.FC = () => {
             <InfoText text="Alespoň jedno číslo" condition={passwordNumber} />
             <InfoText text="Hesla jsou stejná" condition={samePassword} />
             <button className={classes.btn} type="submit">Registrovat</button>
+            <p>Už máte učet? <Link className={classes.loginLink} to="/login">Přihlaste se</Link> </p>
         </form>
         </div>
     );

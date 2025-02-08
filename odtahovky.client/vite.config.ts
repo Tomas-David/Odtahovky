@@ -47,7 +47,7 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            '^/weatherforecast': {
+            '^/api/Auth/register': {
                 target,
                 secure: false
             }
