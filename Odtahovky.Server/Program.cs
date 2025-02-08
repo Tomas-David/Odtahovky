@@ -14,7 +14,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-builder.Services.AddAuthorization();
+
 builder.Services.AddIdentityApiEndpoints<IdentityUser>(options =>
 {
     options.User.RequireUniqueEmail = true;
@@ -25,6 +25,7 @@ builder.Services.AddIdentityApiEndpoints<IdentityUser>(options =>
     options.Password.RequireNonAlphanumeric = false;
     options.SignIn.RequireConfirmedEmail = false;
 }).AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddAuthorization();
 var app = builder.Build();
 
 app.UseDefaultFiles();

@@ -23,7 +23,6 @@ const Register: React.FC = () => {
         if(samePassword){
             
             const data = { email, password, userName, Phone };
-            console.log(data);
             await fetch("/api/Auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
